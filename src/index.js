@@ -1,4 +1,4 @@
-import {performUrlLookUp} from "./src/scripts/mock_server.js";
+import {performUrlLookUp} from "./scripts/mock_server.js";
 
 let lastTime = 0;
 const throttleTimeInMilliseconds = 100;
