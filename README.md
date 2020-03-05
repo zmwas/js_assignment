@@ -1,5 +1,5 @@
 # Installation
 
 - Run npm install
-- Run npm run dev
+- Run npm run start
 - Go to localhost:8080/
