@@ -26,6 +26,7 @@ document.addEventListener('keydown', async () => {
             if (now - lastTime >= throttleTimeInMilliseconds) {
                 const results = await performServerLookUp(text);
                 result.textContent = `The url ${results.urlExists ? "exists and is a" : "does not exist"} ${results.urlExists ? results.urlType : ""}`;
+                lastTime = now;
             }
         }
     }
