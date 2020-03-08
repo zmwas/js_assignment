@@ -7,9 +7,11 @@ var urls = [
 export const performUrlLookUp = (url) => {
     return new Promise((resolve) => {
         setTimeout(() => {
-            const urlExists = urls.includes(url);
+            let request = new XMLHttpRequest();
+            request.open("GET", url, true);
+            const urlExists = request.readyState !== 4;
             if (urlExists) {
-                resolve({urlExists: urlExists, urlType: isFile(url) ? "File" : "Folder"});
+                resolve({urlExists: urlExists, urlType: isFile(url) ? "Folder" : "File"});
             }
             resolve({urlExists: urlExists, urlType: "unknown"})
         }, 750);
