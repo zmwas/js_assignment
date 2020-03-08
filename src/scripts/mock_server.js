@@ -6,7 +6,7 @@ export const performUrlLookUp = (url) => {
             request.open("GET", url, true);
             const urlExists = request.readyState !== 4;
             if (urlExists) {
-                resolve({urlExists: urlExists, urlType: isFile(url) ? "Folder" : "File"});
+                resolve({urlExists: urlExists, urlType: isFile(url) ? "File" : "Folder"});
             }
             resolve({urlExists: urlExists, urlType: "unknown"})
         }, 750);
