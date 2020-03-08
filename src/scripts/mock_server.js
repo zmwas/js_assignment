@@ -1,8 +1,3 @@
-var urls = [
-    'https://example.com/scripts',
-    'https://example.com/scripts/url_validator.js'
-];
-
 
 export const performUrlLookUp = (url) => {
     return new Promise((resolve) => {
